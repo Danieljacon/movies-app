@@ -2,10 +2,10 @@ import React from "react";
 
 import { Container } from "./styles";
 
-export default function Footer() {
+export default function MovieListing() {
   return (
     <Container>
-      dfgdsf
+      
     </Container>
   )
 }

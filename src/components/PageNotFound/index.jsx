@@ -2,10 +2,10 @@ import React from "react";
 
 import { Container } from "./styles";
 
-export default function Footer() {
+export default function PageNotFound() {
   return (
     <Container>
-      dfgdsf
+      Página não encontrada
     </Container>
   )
 }
