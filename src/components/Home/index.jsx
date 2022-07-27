@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "../Header";
-
+import MovieListing from "../MovieListing";
 import { Container } from "./styles";
 
 export default function Home() {
   return (
     <Container>
-      <Header />
+      <MovieListing />
     </Container>
-  )
+  );
 }

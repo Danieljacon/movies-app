@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Container } from "./styles";
+import { Container, Copyright } from "./styles";
 
 export default function Footer() {
   return (
     <Container>
-      dfgdsf
+      <Copyright>Desenvolvido por: Daniel Jacon</Copyright>
     </Container>
-  )
+  );
 }
