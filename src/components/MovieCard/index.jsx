@@ -1,11 +1,17 @@
 import React from "react";
 
-import { Container } from "./styles";
+import * as S from "./styles";
 
-export default function MovieCard() {
+export default function MovieCard(props) {
+  const movie = props.data;
+  const LANCAMENTO = "Lançamento";
   return (
-    <Container>
-      asdasd
-    </Container>
-  )
+    <S.Box key={movie.imdbID}>
+      <S.Image src={movie.Poster} alt={movie.Title} />
+      <S.Title>
+        <h3>{movie.Title}</h3>
+        <p>{`${LANCAMENTO} ${movie.Year}`}</p>
+      </S.Title>
+    </S.Box>
+  );
 }

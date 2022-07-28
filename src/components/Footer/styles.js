@@ -10,14 +10,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   min-height: ${(props) => props.theme.sizes[16]};
+  max-width: ${(props) => props.theme.sizes["6xl"]};
+  margin: 0 auto;
   font-size: ${(props) => props.theme.typography.fontSizes["2xl"]};
   padding: 0 ${(props) => props.theme.sizes[10]};
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  z-index: 998;
-  border-top: ${(props) => props.theme.borders["1px"]};
-  border-color: ${(props) => props.theme.colors.tertiary};
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
     max-height: 55px;

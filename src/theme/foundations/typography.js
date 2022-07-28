@@ -39,7 +39,7 @@ const typography = {
   },
 
   fonts: {
-    body: `Cabin, sans-serif`,
+    body: `'Carrois Gothic SC', sans-serif`,
   },
 
   fontSizes: {

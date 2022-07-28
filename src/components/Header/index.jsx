@@ -14,13 +14,13 @@ export default function Header() {
         <S.NavbarContainer>
           <S.NavLogo to="/" onClick={closeMobileMenu}>
             Filmes
-            <FilmStrip size={32} color="#F6A058" />
+            <FilmStrip size={32} color="white" />
           </S.NavLogo>
           <S.MobileIcon onClick={handleClick}>
             {click ? (
-              <XCircle size={32} color="#F6A058" />
+              <XCircle size={32} color="white" />
             ) : (
-              <DotsThreeCircle size={32} color="#F38121" />
+              <DotsThreeCircle size={32} color="white" />
             )}
           </S.MobileIcon>
           <S.NavMenu onClick={handleClick} click={click}>

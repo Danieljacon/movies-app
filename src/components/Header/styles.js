@@ -14,8 +14,6 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: ${(props) => props.theme.borders["1px"]};
-  border-color: ${(props) => props.theme.colors.tertiary};
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
     max-height: 55px;
@@ -24,15 +22,29 @@ export const Nav = styled.nav`
 export const Container = styled.div`
   z-index: 1;
   width: 100%;
+
+
 `;
+
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: ${(props) => props.theme.sizes[16]};
-  padding: 0 ${(props) => props.theme.sizes[10]};
-  max-width: ${(props) => props.theme.sizes.container["xl"]};
+  padding-left: ${(props) => props.theme.sizes[12]};
+  padding-right: ${(props) => props.theme.sizes[10]};
+  max-width: ${(props) => props.theme.sizes["6xl"]};
 
-  ${Container}
+  ${Container};
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding: 0 ${(props) => props.theme.sizes[10]};
+  };
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: ${(props) => props.theme.sizes[16]};
+  }
 `;
 
 export const NavLogo = styled(Link)`
@@ -54,9 +66,10 @@ export const MobileIcon = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 30%);
+    transform: translate(-100%, 40%);
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 9999;
   }
 `;
 
@@ -67,9 +80,10 @@ export const NavMenu = styled.ul`
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
     flex-direction: column;
     width: 100%;
-    height: 92.7vh;
+    min-height: 100vh;
+    height: 100%;
     position: absolute;
-    top: ${(props) => props.theme.sizes[12]};
+    top: 0;
     left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
@@ -101,6 +115,7 @@ export const NavLinks = styled(Link)`
     padding: 2rem;
     width: 100%;
     display: table;
+    font-weight: ${(props) => props.theme.typography.fontWeights.bold};
     &:hover {
       color: ${(props) => props.theme.colors.secondary};
       transition: all 0.3s ease;
@@ -122,24 +137,5 @@ export const NavItemBtn = styled.li`
     ${centerItems};
     width: 100%;
     height: 120px;
-  }
-`;
-export const Button = styled.button`
-  border-radius: 4px;
-  background: #2c2c34;
-  white-space: nowrap;
-  padding: 12px;
-  color: #fff;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  &:hover {
-    transition: all 0.3s ease-out;
-    background: ${(props) => props.theme.colors.secondary};
-    background-color: ${(props) => props.theme.colors.tertiary};
-  }
-  @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    width: 100%;
   }
 `;

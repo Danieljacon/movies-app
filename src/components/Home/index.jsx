@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { addMovies } from "../../features/movies/movieSlice";
 
 export default function Home() {
-  const movieTitle = "harry potter";
+  const movieTitle = "marvel";
   const atualPage = 2;
   const dispatch = useDispatch();
 
