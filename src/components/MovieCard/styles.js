@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Title = styled.span`
+
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -20,6 +21,10 @@ export const Title = styled.span`
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+    a {
+      text-decoration: none;
+    }
 `;
 
 export const Box = styled.div`
