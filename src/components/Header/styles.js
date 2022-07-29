@@ -14,6 +14,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+  background: ${(props) => props.theme.colors.opacityToBottom};
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
     max-height: 55px;
@@ -22,8 +23,8 @@ export const Nav = styled.nav`
 export const Container = styled.div`
   z-index: 1;
   width: 100%;
-
-
+  position: fixed;
+  top: 0;
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -38,8 +39,6 @@ export const NavbarContainer = styled(Container)`
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
     padding: 0 ${(props) => props.theme.sizes[10]};
-  };
-  @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
     position: fixed;
     width: 100%;
     top: 0;

@@ -35,6 +35,7 @@ export default function MovieListing() {
               data={{
                 Title: serie.Title,
                 Year: serie.Year,
+                imdbID: serie.imdbID,
                 Type: serie.Type,
                 Poster: serie.Poster,
               }}
@@ -45,9 +46,9 @@ export default function MovieListing() {
 
   return (
     <S.Wrapper>
-      <h1>Lista de filmes:</h1>
+      <h1>Filmes</h1>
       <S.Container>{renderMovies}</S.Container>
-      <h1>Lista de séries:</h1>
+      <h1>Séries</h1>
       <S.Container>{renderSeries}</S.Container>
     </S.Wrapper>
   );

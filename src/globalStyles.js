@@ -1,4 +1,15 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, keyframes } from "styled-components";
+const gradient = keyframes`
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+`;
 
 const GlobalStyles = createGlobalStyle`
     * {
@@ -13,6 +24,16 @@ const GlobalStyles = createGlobalStyle`
     }
     .App {
         background: ${(props) => props.theme.colors.background};
+	background-size: 400% 400%;
+	animation: ${gradient} 20s ease infinite;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-`
+    .Wrapper {
+        padding: 80px 0;
+    }
+`;
 export default GlobalStyles;

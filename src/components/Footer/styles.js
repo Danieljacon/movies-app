@@ -9,14 +9,18 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: ${(props) => props.theme.sizes[16]};
-  max-width: ${(props) => props.theme.sizes["6xl"]};
+  width: 100vw;
+  min-height: ${(props) => props.theme.sizes[10]};
   margin: 0 auto;
   font-size: ${(props) => props.theme.typography.fontSizes["2xl"]};
   padding: 0 ${(props) => props.theme.sizes[10]};
+  position: fixed;
+  bottom: 0;
+  background: ${(props) => props.theme.colors.opacityToTop};
 
-  @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    max-height: 55px;
+
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.md}) {
+    height: 10px;
   }
 `;
 

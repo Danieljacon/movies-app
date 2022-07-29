@@ -9,11 +9,9 @@ export default function MovieCard(props) {
   return (
     <S.Box key={movie.imdbID}>
       <S.Image src={movie.Poster} alt={movie.Title} />
-      <S.Title>
-        <Link to={`/movie/${movie.imdbID}`}>
+      <S.Title to={`/movie/${movie.imdbID}`}>
           <h3>{movie.Title}</h3>
           <p>{`${LANCAMENTO} ${movie.Year}`}</p>
-        </Link>
       </S.Title>
     </S.Box>
   );

@@ -1,10 +1,3 @@
-// const randomHslaColor = () => {
-//   const hue = Math.floor(Math.random() * 360);
-//   const saturation = Math.floor(Math.random() * 100);
-//   const lightness = Math.floor(Math.random() * 100);
-//   return `hsla(${hue}, ${saturation}%, ${lightness}%, 1)`;
-// };
-
 const colors = {
   transparent: "transparent",
   current: "currentColor",
@@ -15,8 +8,10 @@ const colors = {
   secondary: "#F6A058",
   tertiary: "#006BAA",
   quaternary: "#004471",
-  background: `radial-gradient(circle, hsla(29, 92%, 70%, 1) 0%, hsla(0, 87%, 73%, 1) 100%)`,
-  // background: `radial-gradient(circle, ${randomHslaColor()} 0%, ${randomHslaColor()} 100%)`,
+  // background: `radial-gradient(circle, hsla(29, 92%, 70%, 1) 0%, hsla(0, 87%, 73%, 1) 100%)`,
+  background: `linear-gradient(-45deg, #9b5de5, #f15bb5, #00bbf9, #fee440)`,
+  opacityToBottom: "linear-gradient(180deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0) 100%)",
+  opacityToTop: "linear-gradient(0deg, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0) 100%)",
 
   whiteAlpha: {
     50: "rgba(255, 255, 255, 0.04)",

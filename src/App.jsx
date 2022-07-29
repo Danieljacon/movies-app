@@ -12,11 +12,14 @@ function App() {
     <div className="App">
       <GlobalStyles />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/movie/:imdbID" element={<MovieDetail />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+      <div className="Wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:imdbID" element={<MovieDetail />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </div>
+
       <Footer />
     </div>
   );
