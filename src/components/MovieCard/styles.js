@@ -1,5 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    bottom: -100%;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+`;
 
 export const Title = styled(Link)`
   font-size: 16px;
@@ -32,6 +43,7 @@ export const Box = styled.div`
   border-radius: ${(props) => props.theme.radii.xl};
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  animation: ${fadeIn} 0.5s ease;
 
   &:hover {
     ${Title} {

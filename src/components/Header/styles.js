@@ -1,5 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
+
+// width 0 from 100
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    bottom: -100%;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+`;
 
 const centerItems = {
   display: "flex",
@@ -25,6 +37,7 @@ export const Container = styled.div`
   width: 100%;
   position: fixed;
   top: 0;
+
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -34,6 +47,7 @@ export const NavbarContainer = styled(Container)`
   padding-left: ${(props) => props.theme.sizes[12]};
   padding-right: ${(props) => props.theme.sizes[10]};
   max-width: ${(props) => props.theme.sizes["6xl"]};
+  animation: ${fadeIn} .5s ease-in-out;
 
   ${Container};
 

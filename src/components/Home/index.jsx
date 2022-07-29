@@ -5,13 +5,6 @@ import { useDispatch } from "react-redux";
 import { fetchAsyncMovies, fetchAsyncSeries } from "../../features/movies/movieSlice";
 
 export default function Home() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchAsyncMovies())
-    dispatch(fetchAsyncSeries())
-  }, [dispatch]);
-
   return (
     <Container>
       <MovieListing />

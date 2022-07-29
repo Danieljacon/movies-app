@@ -24,7 +24,7 @@ export default function MovieListing() {
             />
           );
         })
-      : "No movies found";
+      : false;
 
   let renderSeries =
     series.Response === "True"
@@ -42,14 +42,28 @@ export default function MovieListing() {
             />
           );
         })
-      : "No series found";
+      : false;
 
   return (
     <S.Wrapper>
-      <h1>Movies</h1>
-      <S.Container>{renderMovies}</S.Container>
-      <h1>Series</h1>
-      <S.Container>{renderSeries}</S.Container>
+      {renderMovies && (
+        <>
+          <h1>Movies</h1>
+          <S.Container>{renderMovies}</S.Container>
+        </>
+      )}
+      {renderSeries && (
+        <>
+          <h1>Series</h1>
+          <S.Container>{renderSeries}</S.Container>
+        </>
+      )}
+      {
+        !renderMovies && !renderSeries && (
+          <span>Do a search in the search bar to find a result.
+          Otherwise, no results were found.</span>
+        )
+      }
     </S.Wrapper>
   );
 }

@@ -12,7 +12,6 @@ export default function MovieDetail() {
   const { imdbID } = useParams();
   const dispatch = useDispatch();
   const data = useSelector(getMovieOrSerieDetail);
-  console.log(data);
 
   useEffect(() => {
     dispatch(fetchAsyncMovieOrSerieDetail(imdbID));

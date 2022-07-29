@@ -1,6 +1,19 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    bottom: -100%;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
+`;
 
 export const Wrapper = styled.div`
+  position: relative;
+  animation: ${fadeIn} 0.5s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
