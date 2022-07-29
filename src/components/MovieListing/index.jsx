@@ -46,9 +46,9 @@ export default function MovieListing() {
 
   return (
     <S.Wrapper>
-      <h1>Filmes</h1>
+      <h1>Movies</h1>
       <S.Container>{renderMovies}</S.Container>
-      <h1>Séries</h1>
+      <h1>Series</h1>
       <S.Container>{renderSeries}</S.Container>
     </S.Wrapper>
   );

@@ -86,15 +86,8 @@ export const DataBox = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
   gap: ${(props) => props.theme.sizes[2]};
   padding: ${(props) => props.theme.sizes[6]};
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  border-radius: ${(props) => props.theme.radii.xl};
 
   @media (max-width: ${(props) => props.theme.sizes["md"]}) {
     min-width: 100%;
@@ -103,7 +96,6 @@ export const DataBox = styled.div`
 
 export const StrongData = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   span {
@@ -119,11 +111,11 @@ export const StrongData = styled.div`
 
 export const StrongInfos = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
-
+  text-align: right;
   span {
     min-width: ${(props) => props.theme.sizes["24"]};
+    text-align: left;
   }
   @media (max-width: ${(props) => props.theme.sizes["md"]}) {
     max-width: 100%;

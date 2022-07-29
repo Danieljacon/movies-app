@@ -13,7 +13,7 @@ export default function Header() {
       <S.Nav>
         <S.NavbarContainer>
           <S.NavLogo to="/" onClick={closeMobileMenu}>
-            Filmes
+            Attraction
             <FilmStrip size={32} color="white" />
           </S.NavLogo>
           <S.MobileIcon onClick={handleClick}>
