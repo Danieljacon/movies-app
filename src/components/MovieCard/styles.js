@@ -21,10 +21,11 @@ export const Title = styled(Link)`
   font-size: 0;
   background: ${(props) => props.theme.colors.background};
   opacity: 1;
-  transition: all 0.2s ease-in-out;
+  transition: all .4s ease;
   position: absolute;
   height: 100%;
-  width: 0;
+  transform: translateX(-100%);
+  width: 100%;
   text-align: center;
   padding: ${(props) => props.theme.sizes[2]};
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -45,13 +46,11 @@ export const Box = styled.div`
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   animation: ${fadeIn} 0.5s ease;
 
-  &:hover {
-    ${Title} {
-      font-size: 16px;
-      color: ${(props) => props.theme.colors.primary};
-      opacity: 0.9;
-      width: 100%;
-    }
+  &:hover ${Title} {
+    font-size: 16px;
+    color: ${(props) => props.theme.colors.primary};
+    opacity: 0.9;
+    transform: translateY(0);
   }
 
   &:before {
