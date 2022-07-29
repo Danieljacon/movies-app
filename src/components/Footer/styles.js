@@ -36,7 +36,7 @@ export const Copyright = styled.h1`
   letter-spacing: ${(props) => props.theme.typography.letterSpacings.widest};
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    justify-self: center;
+    margin: 0 auto;
     font-size: ${(props) => props.theme.typography.fontSizes["sm"]};
   }
 

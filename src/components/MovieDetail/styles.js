@@ -167,6 +167,6 @@ export const StrongInfos = styled.div`
   @media (max-width: ${(props) => props.theme.sizes["md"]}) {
     max-width: 100%;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 `;
