@@ -13,6 +13,22 @@ const fadeIn = keyframes`
   }
 `;
 
+const borderAnimated = keyframes`
+/* from left to right border */
+  0% {
+    transform: translateY(0px) scaleX(0.9);
+    border-bottom: 1px solid #fff;
+  }
+  50% {
+    transform: translateY(-5px) scaleX(1);
+    border-bottom: 5px solid #fff;
+  }
+  100% {
+    transform: translateY(0px) scaleX(0.9);
+    border-bottom: 0px solid #fff;
+  }
+`;
+
 const centerItems = {
   display: "flex",
   justifyContent: "center",
@@ -37,7 +53,6 @@ export const Container = styled.div`
   width: 100%;
   position: fixed;
   top: 0;
-
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -47,7 +62,7 @@ export const NavbarContainer = styled(Container)`
   padding-left: ${(props) => props.theme.sizes[12]};
   padding-right: ${(props) => props.theme.sizes[10]};
   max-width: ${(props) => props.theme.sizes["6xl"]};
-  animation: ${fadeIn} .5s ease-in-out;
+  animation: ${fadeIn} 0.5s ease-in-out;
 
   ${Container};
 
@@ -106,9 +121,9 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: ${(props) => props.theme.sizes[16]};
-  border-bottom: 2px solid transparent;
   &:hover {
-    border-bottom: 2px solid ${(props) => props.theme.colors.primary};
+    /* border-bottom: 2px solid ${(props) => props.theme.colors.primary}; */
+    animation: ${borderAnimated} 0.8s ease-in-out infinite;
   }
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
     width: 100%;
@@ -122,12 +137,39 @@ export const NavLinks = styled(Link)`
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;
   padding: 0.5rem 1rem;
+  display: flex;
   height: 100%;
   @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
-    text-align: center;
     padding: 2rem;
     width: 100%;
-    display: table;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 2rem;
+    font-weight: ${(props) => props.theme.typography.fontWeights.bold};
+    &:hover {
+      color: ${(props) => props.theme.colors.secondary};
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
+export const LinkOtherPage = styled.a`
+  ${centerItems};
+  color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  @media screen and (max-width: ${(props) => props.theme.breakpoints.lg}) {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
     font-weight: ${(props) => props.theme.typography.fontWeights.bold};
     &:hover {
       color: ${(props) => props.theme.colors.secondary};

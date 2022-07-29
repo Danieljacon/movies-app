@@ -1,9 +1,19 @@
-import { DotsThreeCircle, FilmStrip, XCircle } from "phosphor-react";
+import {
+  DotsThreeCircle,
+  FilmStrip,
+  GithubLogo,
+  House,
+  LinkedinLogo,
+  XCircle,
+} from "phosphor-react";
 import React, { useState } from "react";
 import * as S from "./styles";
 import SearchBar from "../SearchBar";
 import { useDispatch } from "react-redux";
-import { fetchAsyncMovies, fetchAsyncSeries } from "../../features/movies/movieSlice";
+import {
+  fetchAsyncMovies,
+  fetchAsyncSeries,
+} from "../../features/movies/movieSlice";
 
 export default function Header() {
   const [click, setClick] = useState(false);
@@ -41,13 +51,29 @@ export default function Header() {
 
           <S.NavMenu onClick={handleClick} click={click}>
             <S.NavItem>
-              <S.NavLinks to="/" onClick={closeMobileMenu}>
-                Linkedin
-              </S.NavLinks>
+              <S.LinkOtherPage
+                href="https://www.linkedin.com/in/daniel-jacon/"
+                target="_blank"
+                onClick={closeMobileMenu}
+              >
+                <LinkedinLogo size={32} weight="fill" />
+                <span>Linkedin</span>
+              </S.LinkOtherPage>
+            </S.NavItem>
+            <S.NavItem>
+              <S.LinkOtherPage
+                href="https://www.github.com/danielJacon/"
+                target="_blank"
+                onClick={closeMobileMenu}
+              >
+                <GithubLogo size={32} weight="fill" />
+                <span>Github</span>
+              </S.LinkOtherPage>
             </S.NavItem>
             <S.NavItem>
               <S.NavLinks to="/" onClick={closeMobileMenu}>
-                Home
+                <House size={32} weight="fill" />
+                <span>Home</span>
               </S.NavLinks>
             </S.NavItem>
           </S.NavMenu>
