@@ -1,3 +1,9 @@
+## Projeto desenvolvido em ReactJS, utilizando a API do OMDB.
+## Para esse, o foco foi avançar em tópicos do Redux Toolkit (Redux Thunk) e Axios, para trabalhar com as requisições da API.
+
+# Tecnologias utilizadas no projeto:
+ReactJS, Redux Toolkit, Styled Components e Axios.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
