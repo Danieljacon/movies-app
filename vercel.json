@@ -1,8 +1,5 @@
 {
-    "rewrites": [{
-        "source": "/movie/:imdbID",
-        "destination": "/movie/:imdbID",
-        "type": "path"
-    }]
-}
-
+    "rewrites":  [
+      {"source": "/(.*)", "destination": "/"}
+    ]
+  }
